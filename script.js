@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   var video = document.getElementById("fullscreen-video");
   var playPauseBtn = document.getElementById("play-pause-btn");
-  var volumeSlider = document.getElementById("volume-slider");
+  var spotifyBtn = document.getElementById("spotify-btn");
 
   playPauseBtn.addEventListener("click", function() {
     if (video.paused || video.ended) {
@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  volumeSlider.addEventListener("input", function() {
-    video.volume = volumeSlider.value;
+  spotifyBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    window.open("https://www.spotify.com", "_blank");
   });
 });
